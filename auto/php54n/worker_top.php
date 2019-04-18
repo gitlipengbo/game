@@ -8,5 +8,5 @@ ouput("读取配置");
 $typelist = array();
 $yslist = array();
 $worker = new Worker('websocket://0.0.0.0:' . $dk);
-Worker::$stdoutFile = '/auto/stdout.log';
+Worker::$stdoutFile = './stdout.log';
 var_dump($worker);
