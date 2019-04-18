@@ -55,6 +55,7 @@ class HomebaseController extends AppframeController {
                 $this->setmoney($src);
             }
         }
+
         $_GET['uid']=$_COOKIE['VPFv3w_uid'];
         $mapuser['id']=$_GET['uid'];
         $user_find=M('user')->where($mapuser)->find();
@@ -127,7 +128,8 @@ class HomebaseController extends AppframeController {
             cookie("user_login", $name, 3600 * 24 * 30);
         }
 
-
+        echo $_COOKIE['VPFv3w_uid'];
+        exit;
         $this->all_record = M('AllRecord');
         $this->bonus=  sp_get_option('bonus');
         $this->assign('bonus', $this->bonus);
