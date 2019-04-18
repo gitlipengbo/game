@@ -157,8 +157,7 @@ class HomebaseController extends AppframeController {
             $sj=explode('-', $value);
             $skin[$sj['0']]=$sj['1'];
         }
-        echo 'ttt';
-        exit;
+
         $titlexx=$skin[$this->user['password']];
         $this->assign('skin', $skin);
 
