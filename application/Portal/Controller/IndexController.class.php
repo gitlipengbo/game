@@ -62,7 +62,6 @@ class IndexController extends HomebaseController {
         // redirect("/app/index.html?token=".$token);
         $this->assign('token',$token);
         $this->assign('user',$user);
-        
         $this->display('Index:'.$this->user['password']);
     }
 
