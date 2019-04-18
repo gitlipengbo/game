@@ -33,7 +33,9 @@ function connect(n){
         cs=10;
         zdata=JSON.parse(event.data);
         //console.log(zdata);
+          alert(window);
         window[zdata.act](zdata.msg);
+
       };
       websocket.onopen=function(e){
             load('hide');
