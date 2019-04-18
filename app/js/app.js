@@ -32,7 +32,7 @@ function connect(n){
       websocket.onmessage = function(event) {
         cs=10;
         zdata=JSON.parse(event.data);
-        alert(zdata);
+        alert(zdata.act+'|'+zdata.msg);
         //console.log(zdata);
         window[zdata.act](zdata.msg);
       };
