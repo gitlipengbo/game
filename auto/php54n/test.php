@@ -13,7 +13,6 @@ $worker->uidConnections = array();
 $bonus=array();
 $extract=array();
 $connection2=array();
-var_dump($worker);
 $worker->onWorkerStart = function($worker)
 {	
 	ouput('程序开始运行');

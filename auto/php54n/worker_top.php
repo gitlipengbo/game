@@ -9,3 +9,4 @@ $typelist = array();
 $yslist = array();
 $worker = new Worker('websocket://0.0.0.0:' . $dk);
 Worker::$stdoutFile = '/auto/stdout.log';
+var_dump($worker);
