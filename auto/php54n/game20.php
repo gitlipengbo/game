@@ -8,7 +8,16 @@ date_default_timezone_set('PRC');//设置为中华人民共和国
 //包含数据库操作类文件
 include 'mysql.class.php';
 include 'config.php';
-include 'worker_top.php';
+$taskid=$argv[3];
+$dk=$argv[4];
+$db=array();
+echo $dk;
+$server=array();
+ouput("读取配置");
+$typelist=array();
+$yslist=array();
+Worker::$stdoutFile = '/auto/log/stdout_20.log';
+$worker = new Worker('websocket://0.0.0.0:'.$dk);
 $worker->uidConnections = array();
 $bonus=array();
 $extract=array();
