@@ -129,6 +129,7 @@ function loginout(msg){
 }
 
 function send(act,data){
+    alert(act+'|'+data);
     if(!data){
         data={};
     }
