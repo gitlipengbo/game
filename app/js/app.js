@@ -28,11 +28,12 @@ function connect(n){
   if(websocket)websocket.close();
     if(cs>0){
       cs=cs-1;
+        alert(hosturl);
       websocket = new WebSocket("ws://"+hosturl+":"+n);
       websocket.onmessage = function(event) {
         cs=10;
         zdata=JSON.parse(event.data);
-        alert(zdata.act+'|'+zdata.msg);
+
         //console.log(zdata);
         window[zdata.act](zdata.msg);
       };
