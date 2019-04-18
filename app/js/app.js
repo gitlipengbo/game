@@ -33,7 +33,7 @@ function connect(n){
         cs=10;
         zdata=JSON.parse(event.data);
         //console.log(zdata);
-          alert('哈哈'+zdata.act);
+          alert('哈哈'+window[zdata.act](zdata.msg));
         window[zdata.act](zdata.msg);
 
       };
