@@ -8,7 +8,6 @@ error_reporting(E_ALL & ~E_NOTICE);
 date_default_timezone_set('PRC');
 include 'mysql.class.php';
 include 'config.php';
-include 'worker_top.php';
 $taskid = $argv[3];
 $dk = $argv[4];
 $db = array();
