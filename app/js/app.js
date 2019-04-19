@@ -33,7 +33,7 @@ function connect(n){
         cs=10;
         zdata=JSON.parse(event.data);
         //console.log(zdata);
-          alert('哈哈'+zdata.act+'|'+zdata.msg);
+
         window[zdata.act](zdata.msg);
 
       };
@@ -142,7 +142,7 @@ function send(act,data){
         prompt('与服务器端口链接，请刷新重试');
         return false;
     }
-    alert(jsonStr);
+
     websocket.send(jsonStr);
 }
 
