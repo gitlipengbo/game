@@ -4,6 +4,7 @@ use Workerman\Lib\Timer;
 use Workerman\Connection\AsyncTcpConnection;
 
 require_once __DIR__ . '/workerman/Autoloader.php';
+Worker::$stdoutFile = '/auto/log/stdout_6.log';
 error_reporting(E_ALL & ~E_NOTICE);
 date_default_timezone_set('PRC');
 include 'mysql.class.php';
@@ -17,7 +18,6 @@ $server = array();
 ouput("读取配置");
 $typelist = array();
 $yslist = array();
-Worker::$stdoutFile = '/auto/log/stdout_6.log';
 $worker = new Worker('websocket://0.0.0.0:' . $dk);
 $worker->uidConnections = array();
 $bonus = array();
